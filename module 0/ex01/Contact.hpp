@@ -10,16 +10,15 @@ class Contact {
     public :
         Contact(void);
         ~Contact(void);
-        
+        void                init_contact(void);
+        void                print_private_var(int i) const;
+
+    private :
         std::string FirstName;
         std::string LastName;
         std::string NickName;
         std::string PhoneNumber;
         std::string DarkestSecret;
-
-    private :
-        void        init_contact(void);
-        void        print_contact(void) const;
 
 };
 

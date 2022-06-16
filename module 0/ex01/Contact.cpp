@@ -1,31 +1,13 @@
 #include "PhoneBook.hpp"
 
-# define SPACE ' '
+void    Contact::print_private_var(int i) const {
 
-void    Contact::print_contact(void) const {
+    std::cout << "|" << std::setfill(' ') << std::setw(10) << i + 1;
+    std::cout << "|" << std::setfill(' ') << std::setw(10) << ((int)Contact::FirstName.size() > 10 ? Contact::FirstName.substr(0, 9) + "." : this->FirstName);
+    std::cout << "|" << std::setfill(' ') << std::setw(10) << ((int)Contact::LastName.size() > 10 ? Contact::LastName.substr(0, 9) + "." : this->LastName);
+    std::cout << "|" << std::setfill(' ') << std::setw(10) << ((int)Contact::NickName.size() > 10 ? Contact::NickName.substr(0, 9) + "." : this->NickName);
+    std::cout << "|" << std::endl;
 
-    int i = -2;
-
-    while (++i < 8)
-    {
-        if (i == -1)
-        {
-            std::cout << "|" << std::setfill(SPACE) << std::setw(10) << "INDEX";
-            std::cout << "|" << std::setfill(SPACE) << std::setw(10) << "FIRSTNAME";
-            std::cout << "|" << std::setfill(SPACE) << std::setw(10) << "LASTNAME";
-            std::cout << "|" << std::setfill(SPACE) << std::setw(10) << "NICKNAME";
-            std::cout << "|" << std::endl;
-
-        }
-        else
-        {
-            std::cout << "|" << std::setfill(' ') << std::setw(10) << i + 1;
-            std::cout << "|" << std::setfill(' ') << std::setw(10) << ((int)this->FirstName.size() > 10 ? this->FirstName.substr(0, 9) + "." : this->FirstName);
-            std::cout << "|" << std::setfill(' ') << std::setw(10) << ((int)this->LastName.size() > 10 ? this->LastName.substr(0, 9) + "." : this->LastName);
-            std::cout << "|" << std::setfill(' ') << std::setw(10) << ((int)this->NickName.size() > 10 ? this->NickName.substr(0, 9) + "." : this->NickName);
-            std::cout << "|" << std::endl;
-        }
-    }
 }
 
 void Contact::init_contact(void) {
@@ -39,7 +21,7 @@ void Contact::init_contact(void) {
     do {
         std::cout << "Last Name : ";
         if (!getline(std::cin, Contact::LastName))
-            exit(0);
+            exit(0)
     } while (Contact::LastName.find_first_not_of(' ') == std::string::npos);
 
     do {
