@@ -2,6 +2,7 @@
 #define CONTACT_H
 
 #include <iostream>
+#include <iomanip>
 #include <string>
 
 class Contact {
@@ -15,7 +16,10 @@ class Contact {
         std::string NickName;
         std::string PhoneNumber;
         std::string DarkestSecret;
-        void    init_contact(void);
+
+    private :
+        void        init_contact(void);
+        void        print_contact(void) const;
 
 };
 

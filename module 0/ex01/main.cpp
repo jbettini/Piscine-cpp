@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 03:12:35 by jbettini          #+#    #+#             */
-/*   Updated: 2022/06/16 05:30:27 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/06/16 20:23:59 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,16 @@ int main(int ac, char **av)
     int         i;
 
     i = 0;
-    std::cout << "Phone Book : ";
+    std::cout << "Phone Book : " << std::endl;
     while (getline(std::cin, line))
     {
+        if (i == 8)
+            i = 0;
         if (line == "ADD" || line == "add")
-            book.add_contact(i);
+            book.ContactList[i].init_contact();
         else if (line == "EXIT" || line == "exit")
             break ;
-        if (++i == 8)
-            i = 0;
-        std::cout << "Phone Book : ";
+        i++;
+        std::cout << "Phone Book : " << std::endl;
     }
 }

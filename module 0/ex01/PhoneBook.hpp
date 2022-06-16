@@ -9,7 +9,8 @@ class PhoneBook {
         PhoneBook(void);
         ~PhoneBook(void);
         Contact ContactList[8];
-        void add_contact(int i);
+        void    add_contact(int i);
+        void    search_contact(void) const;
 
 };
 
