@@ -8,6 +8,17 @@ void    PhoneBook::add_contact(int i) {
 
 }
 
+void    PhoneBook::search_contact(void) {
+
+    int i = 0;
+
+    this->print_contact();
+    do
+    {
+        /* code */
+    } while ();
+}
+
 void    PhoneBook::print_contact(void) const {
 
     int i = -1;
@@ -21,7 +32,6 @@ void    PhoneBook::print_contact(void) const {
             std::cout << "|" << std::setfill(SPACE) << std::setw(10) << "LASTNAME";
             std::cout << "|" << std::setfill(SPACE) << std::setw(10) << "NICKNAME";
             std::cout << "|" << std::endl;
-
         }
         else
             this->ContactList[i].print_private_var(i);

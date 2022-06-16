@@ -21,7 +21,7 @@ void Contact::init_contact(void) {
     do {
         std::cout << "Last Name : ";
         if (!getline(std::cin, Contact::LastName))
-            exit(0)
+            exit(0);
     } while (Contact::LastName.find_first_not_of(' ') == std::string::npos);
 
     do {
