@@ -41,8 +41,16 @@ void Contact::init_contact(void) {
         if (!getline(std::cin, Contact::DarkestSecret))
             exit(0);
     } while (Contact::DarkestSecret.find_first_not_of(' ') == std::string::npos);
-
     
+}
+
+void Contact::print_private_contact(void) const {
+
+    std::cout << "First Name : " << this->FirstName << std::endl;
+    std::cout << "Last Name : " << this->LastName << std::endl;
+    std::cout << "Nick Name : " << this->NickName << std::endl;
+    std::cout << "Phone Number : " << this->PhoneNumber << std::endl;
+    std::cout << "Darkest Secret : " << this->DarkestSecret << std::endl;
 }
 
 Contact::Contact (void) {};

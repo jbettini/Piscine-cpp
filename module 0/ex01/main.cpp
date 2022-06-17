@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 03:12:35 by jbettini          #+#    #+#             */
-/*   Updated: 2022/06/16 23:10:58 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/06/17 06:02:13 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int main(int ac, char **av)
         }
         else if (line == "print")
             book.print_contact();
+        else if (line == "SEARCH" || line == "search")
+            book.search_contact();
         else if (line == "EXIT" || line == "exit")
             break ;
         std::cout << "Phone Book : " << std::endl;
