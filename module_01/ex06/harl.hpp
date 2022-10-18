@@ -6,9 +6,12 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 00:30:29 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/17 00:39:30 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:15:11 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef HARL_HPP 
+# define HARL_HPP 
 
 #include <string>
 #include <iostream>
@@ -26,3 +29,5 @@ class Harl {
                 void	_warning( void ); 
                 void	_error( void );
 };
+
+#endif

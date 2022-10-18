@@ -6,12 +6,12 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 04:08:20 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/07 05:00:13 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/17 13:16:21 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMAN_B
-# define HUMAN_B
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
 #include "Weapon.hpp"
 
