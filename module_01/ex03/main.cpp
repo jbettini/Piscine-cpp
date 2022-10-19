@@ -6,14 +6,14 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 04:21:12 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/07 04:56:41 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:46:02 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
-int main (int ac, char **av, char **env) 
+int main () 
 {    
     // Weapon  club("crude spiked club");
     // HumanA bob("Bob", club);

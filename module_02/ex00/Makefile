@@ -6,6 +6,9 @@ SRC		=	Fixed.cpp \
 
 OBJ		=	$(SRC:%.cpp=%.o)
 
+%.o : %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $< 
+
 all: $(NAME)
 
 $(NAME): $(OBJ)

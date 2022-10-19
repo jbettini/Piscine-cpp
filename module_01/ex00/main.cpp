@@ -6,13 +6,13 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 04:25:24 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/05 04:34:36 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:44:06 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
-int main(int ac, char **av, char **env) {
+int main() {
 
     randomChump("Sam");
     Zombie *Mush = newZombie("Mush");

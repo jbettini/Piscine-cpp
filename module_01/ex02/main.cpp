@@ -6,14 +6,14 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/05 05:22:09 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/05 05:29:34 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:44:49 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string>
 #include <iostream>
 
-int main(int ac, char **av, char** env) {
+int main() {
 
     std::string str = "HI THIS IS BRAIN";
     std::string *ptr = &str;
