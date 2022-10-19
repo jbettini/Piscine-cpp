@@ -1,18 +1,18 @@
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef ScavTrap_HPP
+# define ScavTrap_HPP
 
 # include <iostream>
 # include <string>
 
-class ClapTrap
+class ScavTrap
 {
 
 	public:
 
-		ClapTrap(void);
-		ClapTrap(std::string name);
-		ClapTrap( ClapTrap const & src );
-		~ClapTrap(void);
+		ScavTrap(void);
+		ScavTrap(std::string name);
+		ScavTrap( ScavTrap const & src );
+		~ScavTrap(void);
 
 		void			attack(const std::string& target);
 		void			takeDamage(unsigned int amount);
@@ -24,7 +24,7 @@ class ClapTrap
 		int				getAttackDamage(void);
 
 
-		ClapTrap &		operator=( ClapTrap const & rhs );
+		ScavTrap &		operator=( ScavTrap const & rhs );
 
 	private:
 				std::string _name;
