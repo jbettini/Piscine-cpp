@@ -22,6 +22,7 @@ class ClapTrap
 		int				getHitPoints(void);
 		int				getEnergyPoints(void);
 		int				getAttackDamage(void);
+		void			print(void);
 
 
 		ClapTrap &		operator=( ClapTrap const & rhs );

@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:57:34 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/19 11:32:17 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/20 10:27:04 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,4 +86,11 @@ int				ClapTrap::getEnergyPoints(void) {
 }
 int				ClapTrap::getAttackDamage(void) {
 	return (this->_attackDamage);
+}
+
+void	ClapTrap::print(void) {
+	std::cout << "name : " << this->_name << std::endl;
+	std::cout << "energypoints : " << this->_energyPoints << std::endl;
+	std::cout << "hitpoints : " << this->_hitPoints << std::endl;
+	std::cout << "attackdamage : " << this->_attackDamage << std::endl;
 }
