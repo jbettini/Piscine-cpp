@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:57:34 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/22 19:07:04 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/22 19:06:45 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ FragTrap::FragTrap( const FragTrap & src ) : ClapTrap(src._name){
 }
 
 FragTrap::~FragTrap() {
-	std::cout << "FragTrap Destrucor Called" << std::endl << this->_name << " was destroyed !" << std::endl;
+	std::cout << "FragTrap Destrucor Called " << this->_name << " was destroyed !" << std::endl;
 }
 
 FragTrap &				FragTrap::operator=( FragTrap const & rhs ) {

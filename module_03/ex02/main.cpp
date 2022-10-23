@@ -6,16 +6,16 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/19 11:02:16 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/20 11:02:53 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/22 18:21:31 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main () {
 
-    ScavTrap c1;
-    ScavTrap c2("Scavv");
+    FragTrap c1;
+    FragTrap c2("Fraggg");
 
     c1.print();
     c1 = c2;
@@ -33,8 +33,6 @@ int main () {
     c2.beRepaired(7);
     c1.print();
     c2.print();
-    c1.guardGate();
-    c1.guardGate();
-    c1.guardGate(); 
+    c1.highFivesGuys();
     return 0;
 }

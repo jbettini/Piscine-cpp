@@ -1,9 +1,16 @@
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	
-SRC		=	
+NAME	=	diamondtrap	
+SRC		=	ClapTrap.cpp \
+			ScavTrap.cpp \
+			FragTrap.cpp \
+			DiamondTrap.cpp \
+			main.cpp
 
 OBJ		=	$(SRC:%.cpp=%.o)
+
+%.o : %.cpp
+	$(CC) $(CFLAGS) -o $@ -c $< 
 
 all: $(NAME)
 

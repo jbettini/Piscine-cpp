@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:57:34 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/22 17:43:19 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/22 18:37:19 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,13 @@ ScavTrap::ScavTrap(std::string name) : _mode(0) {
 	this->_class = "ScavTrap";
 }
 
-ScavTrap::ScavTrap( const ScavTrap & src ) : ClapTrap(src._name){
+ScavTrap::ScavTrap( const ScavTrap & src ) : ClapTrap(src._name) {
 	std::cout << "ScavTrap Copy Constructor Called" << std::endl;
 	*this = src;
 }
 
 ScavTrap::~ScavTrap() {
-	std::cout << "ScavTrap Destrucor Called" << std::endl << this->_name << " was destroyed !" << std::endl;
+	std::cout << "ScavTrap Destrucor Called " << this->_name << " was destroyed !" << std::endl;
 }
 
 void					ScavTrap::guardGate() {

@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/18 14:57:34 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/20 12:59:13 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/10/22 17:42:51 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,16 @@ ScavTrap::~ScavTrap() {
 }
 
 void					ScavTrap::guardGate() {
-	if (this->_mode == 0)
-	{
-		this->_mode++;
-		std::cout << this->_class << " type " << this->_name << " switch to gate keeper mode !" << std::endl;
-	}
-	else
-	{
-		this->_mode--;
-		std::cout << this->_class << " type " << this->_name << " switch to normal mode !" << std::endl;
+
+	if (this->_hitPoints > 0) {
+		if (this->_mode == 0) {
+			this->_mode++;
+			std::cout << this->_class << " type " << this->_name << " switch to gate keeper mode !" << std::endl;
+		}
+		else {
+			this->_mode--;
+			std::cout << this->_class << " type " << this->_name << " switch to normal mode !" << std::endl;
+		}
 	}
 }
 
