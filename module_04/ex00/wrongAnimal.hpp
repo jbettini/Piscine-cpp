@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   wrongAnimal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 03:44:21 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/25 00:54:01 by jbettini         ###   ########.fr       */
+/*   Created: 2022/10/23 18:13:42 by jbettini          #+#    #+#             */
+/*   Updated: 2022/10/25 00:21:00 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON
-# define WEAPON
+#ifndef WRONGANIMAL_HPP
+# define WRONGANIMAL_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
 
-class Weapon {
+class wrongAnimal {
 
-    public :
-            Weapon(std::string weaponName);
-            ~Weapon(void);
-            std::string const & getType(void);
-            void setType(std::string newtype);
+    public:
+
+        wrongAnimal(void);
+        wrongAnimal(std::string t);
+        wrongAnimal(wrongAnimal const& src);
+        ~wrongAnimal(void);
+        wrongAnimal & operator=(wrongAnimal const & rhs);
+
+        void makeSound(void) const;
+        std::string getType(void) const;
+        
+
+    protected:
+                std::string type;
     
-    private :
-            std::string _type;
-    
+
 };
 
 #endif

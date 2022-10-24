@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 03:44:21 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/25 00:54:01 by jbettini         ###   ########.fr       */
+/*   Created: 2022/10/23 18:13:42 by jbettini          #+#    #+#             */
+/*   Updated: 2022/10/25 00:21:00 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef DOG_HPP
+# define DOG_HPP
 
-Weapon::Weapon(std::string newWeapon) : _type(newWeapon) {};
-Weapon::~Weapon(void) {};
+#include <iostream>
+#include <string>
+#include "Animal.hpp"
 
-std::string const & Weapon::getType(void){
+class Dog : public Animal{
 
-        return this->_type;
-}
+    public:
 
-void Weapon::setType(std::string newtype){
+        Dog(void);
+        Dog(std::string t);
+        Dog(Dog const& src);
+        ~Dog(void);
+        Dog & operator=(Dog const & rhs);
+        std::string getType(void) const;
 
-        this->_type = newtype;
-}
+        void makeSound(void) const; 
+
+};
+
+#endif

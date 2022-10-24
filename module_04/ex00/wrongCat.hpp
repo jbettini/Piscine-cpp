@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   wrongCat.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 03:44:21 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/25 00:54:01 by jbettini         ###   ########.fr       */
+/*   Created: 2022/10/23 18:13:42 by jbettini          #+#    #+#             */
+/*   Updated: 2022/10/25 00:21:00 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON
-# define WEAPON
+#ifndef wrongCat_HPP
+# define wrongCat_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
+#include "wrongAnimal.hpp"
 
-class Weapon {
+class wrongCat : public wrongAnimal{
 
-    public :
-            Weapon(std::string weaponName);
-            ~Weapon(void);
-            std::string const & getType(void);
-            void setType(std::string newtype);
-    
-    private :
-            std::string _type;
-    
+    public:
+
+        wrongCat(void);
+        wrongCat(std::string t);
+        wrongCat(wrongCat const& src);
+        ~wrongCat(void);
+        wrongCat & operator=(wrongCat const & rhs);
+
+        std::string getType(void) const;
+
+        void makeSound(void) const; 
+
 };
 
 #endif

@@ -1,26 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 03:44:21 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/25 00:54:01 by jbettini         ###   ########.fr       */
+/*   Created: 2022/10/23 18:13:42 by jbettini          #+#    #+#             */
+/*   Updated: 2022/10/25 00:21:00 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-Weapon::Weapon(std::string newWeapon) : _type(newWeapon) {};
-Weapon::~Weapon(void) {};
+#include <iostream>
+#include <string>
+#include "Animal.hpp"
 
-std::string const & Weapon::getType(void){
+class Cat : public Animal{
 
-        return this->_type;
-}
+    public:
 
-void Weapon::setType(std::string newtype){
+        Cat(void);
+        Cat(std::string t);
+        Cat(Cat const& src);
+        ~Cat(void);
+        Cat & operator=(Cat const & rhs);
 
-        this->_type = newtype;
-}
+        std::string getType(void) const;
+
+        void makeSound(void) const; 
+
+};
+
+#endif
