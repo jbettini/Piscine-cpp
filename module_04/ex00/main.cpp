@@ -18,5 +18,9 @@ int main() {
     j->makeSound();
     meta->makeSound();
     wrong->makeSound();
+    delete meta;
+    delete j;
+    delete i;
+    delete wrong;
 return 0; 
 }
