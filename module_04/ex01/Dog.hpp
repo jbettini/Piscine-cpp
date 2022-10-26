@@ -25,11 +25,11 @@ class Dog : public Animal{
         Dog(void);
         Dog(std::string t);
         Dog(Dog const& src);
-        ~Dog(void);
+        virtual ~Dog(void);
         Dog & operator=(Dog const & rhs);
         std::string getType(void) const;
 
-        void makeSound(void) const; 
+        void makeSound(void) const;
 
     private:
             Brain *_b;

@@ -18,22 +18,22 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal{
+class Cat : public Animal {
 
     public:
 
         Cat(void);
         Cat(std::string t);
         Cat(Cat const& src);
-        ~Cat(void);
+        virtual ~Cat(void);
         Cat & operator=(Cat const & rhs);
 
         std::string getType(void) const;
-
         void makeSound(void) const;
 
     private:
-            Brain *_b;
+        
+        Brain *_b;
 
 };
 

@@ -6,6 +6,7 @@ SRC		=	Dog.cpp \
 			Animal.cpp \
 			wrongAnimal.cpp \
 			wrongCat.cpp \
+			Brain.cpp \
 			main.cpp
 
 OBJ		=	$(SRC:%.cpp=%.o)
