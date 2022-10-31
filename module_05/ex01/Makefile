@@ -1,10 +1,7 @@
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
-NAME	=	animal	
-SRC		=	Dog.cpp \
-			Cat.cpp \
-			Animal.cpp \
-			Brain.cpp \
+NAME	=	bureaucrat	
+SRC		=	Bureaucrat.cpp \
 			main.cpp
 
 OBJ		=	$(SRC:%.cpp=%.o)

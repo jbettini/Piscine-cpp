@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongCat.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,27 +10,29 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef wrongCat_HPP
-# define wrongCat_HPP
+#ifndef DOG_HPP
+# define DOG_HPP
 
 #include <iostream>
 #include <string>
-#include "wrongAnimal.hpp"
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class wrongCat : public wrongAnimal{
+class Dog : public Animal{
 
     public:
 
-        wrongCat(void);
-        wrongCat(std::string t);
-        wrongCat(wrongCat const& src);
-        ~wrongCat(void);
-        wrongCat & operator=(wrongCat const & rhs);
-
+        Dog(void);
+        Dog(std::string t);
+        Dog(Dog const& src);
+        virtual ~Dog(void);
+        Dog & operator=(Dog const & rhs);
         std::string getType(void) const;
 
-        void makeSound(void) const; 
+        void makeSound(void) const;
 
+    private:
+            Brain *_b;
 };
 
 #endif

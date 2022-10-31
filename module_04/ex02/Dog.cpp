@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongCat.cpp                                         :+:      :+:    :+:   */
+/*   Dog.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,36 +10,39 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "wrongCat.hpp"
+#include "Dog.hpp"
 
-wrongCat::wrongCat(void) {    
-    std::cout << "wrongCat default constructor called !" << std::endl;
-    this->type = "wrongCat";
+Dog::Dog(void) {    
+    std::cout << "Dog default constructor called !" << std::endl;
+    this->type = "Dog";
+    this->_b = new Brain("Wafffff");
 }
 
-wrongCat::wrongCat(std::string t) { 
-    std::cout << "wrongCat constructor with argument called !" << std::endl;
+Dog::Dog(std::string t) { 
+    std::cout << "Dog constructor with argument called !" << std::endl;
     this->type = t;
+    this->_b = new Brain("Wafffff");
 }
 
-wrongCat::wrongCat(wrongCat const & src) {
-    std::cout << "wrongCat copy constructor called !" << std::endl;
+Dog::Dog(Dog const & src) {
+    std::cout << "Dog copy constructor called !" << std::endl;
     *this = src;
 }
 
-wrongCat::~wrongCat(void) { 
-    std::cout << "wrongCat Destructor of " << this->type << " called !" << std::endl;
+Dog::~Dog(void) { 
+    std::cout << "Dog Destructor of " << this->type << " called !" << std::endl;
+    delete this->_b;
 }
 
-wrongCat & wrongCat::operator=(wrongCat const & rhs) {
+Dog & Dog::operator=(Dog const & rhs) {
     this->type = rhs.type;
     return *this;
 }
 
-void    wrongCat::makeSound(void) const {
-    std::cout << "Miaouuuu" << std::endl;
+void    Dog::makeSound(void) const{
+    std::cout << "Waffff" << std::endl;
 }
 
-std::string wrongCat::getType(void) const {
+std::string Dog::getType(void) const{
     return (this->type);
 }

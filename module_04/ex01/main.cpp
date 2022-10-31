@@ -2,12 +2,9 @@
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "wrongCat.hpp"
-
-
 
 int main() {
-    const Animal *a;
+    const Animal *a[4];
     for(int i = 0; i < 4; i++)
     {
         if(i < 4 / 2)

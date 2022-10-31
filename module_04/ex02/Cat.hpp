@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   wrongAnimal.hpp                                         :+:      :+:    :+:   */
+/*   Cat.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,29 +10,30 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGANIMAL_HPP
-# define WRONGANIMAL_HPP
+#ifndef CAT_HPP
+# define CAT_HPP
 
 #include <iostream>
 #include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
-class wrongAnimal {
+class Cat : public Animal {
 
     public:
 
-        wrongAnimal(void);
-        wrongAnimal(std::string t);
-        wrongAnimal(wrongAnimal const& src);
-        ~wrongAnimal(void);
-        wrongAnimal & operator=(wrongAnimal const & rhs);
+        Cat(void);
+        Cat(std::string t);
+        Cat(Cat const& src);
+        virtual ~Cat(void);
+        Cat & operator=(Cat const & rhs);
 
-        void makeSound(void) const;
         std::string getType(void) const;
-        
+        void makeSound(void) const;
 
-    protected:
-                std::string type;
-    
+    private:
+        
+        Brain *_b;
 
 };
 
