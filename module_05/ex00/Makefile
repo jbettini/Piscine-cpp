@@ -2,7 +2,6 @@ CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 NAME	=	bureaucrat	
 SRC		=	Bureaucrat.cpp \
-			Form.cpp \
 			main.cpp
 
 OBJ		=	$(SRC:%.cpp=%.o)

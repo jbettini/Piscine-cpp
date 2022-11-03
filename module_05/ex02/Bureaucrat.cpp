@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 01:26:44 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/02 02:25:30 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/03 03:11:55 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,12 @@ void            Bureaucrat::signForm(std::string formName, bool t) const {
         std::cout << this->_name << " signed " << formName << std::endl;
     else
         std::cout << this->_name << " couldn’t sign " << formName << " because is already signed !" << std::endl;
+}
+
+void     Bureaucrat::executeForm(Form const & form) const {
+    form.execute(*this);
+    std::cout << this->_name << " execute " << form.getFormName() << std::endl;
+    form.execAction(*this);
 }
 
 //  Operator

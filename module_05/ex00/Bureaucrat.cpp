@@ -6,13 +6,11 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 01:26:44 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/02 02:25:30 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/02 02:21:23 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-
-// Constructor
 
 Bureaucrat::Bureaucrat(void) : _name("deafult_name"), _grade(150) {};
 
@@ -21,15 +19,19 @@ Bureaucrat::Bureaucrat(int grade, std::string name) : _name(name){
         throw Bureaucrat::GradeTooLowException();
     else if (grade < 1)
         throw Bureaucrat::GradeTooHighException();
-    else
+    else {
         this->_grade = grade;
+    }
 }
 
 Bureaucrat::Bureaucrat( const Bureaucrat & src) : _name(src.getName()), _grade(src.getGrade()) {}
 
 Bureaucrat::~Bureaucrat(void) {}
 
-// Funct
+Bureaucrat & Bureaucrat::operator=(const Bureaucrat & rhs) {
+    this->_grade = rhs._grade;
+    return *this;
+}
 
 std::string Bureaucrat::getName(void) const{
     return this->_name;
@@ -53,21 +55,7 @@ void    Bureaucrat::decrementGrade(void) {
         throw Bureaucrat::GradeTooLowException();
 }
 
-void            Bureaucrat::signForm(std::string formName, bool t) const {
-    if (t == 1)
-        std::cout << this->_name << " signed " << formName << std::endl;
-    else
-        std::cout << this->_name << " couldn’t sign " << formName << " because is already signed !" << std::endl;
-}
-
-//  Operator
-
 std::ostream &			operator<<( std::ostream & o, Bureaucrat const & i ) {
     o << i.getName() << " , bureaucrat grade " << i.getGrade();
     return o;
-}
-
-Bureaucrat & Bureaucrat::operator=(const Bureaucrat & rhs) {
-    this->_grade = rhs._grade;
-    return *this;
 }

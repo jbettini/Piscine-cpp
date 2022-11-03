@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 01:26:44 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/02 02:21:23 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/03 03:11:42 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,9 @@ void            Bureaucrat::signForm(std::string formName, bool t) const {
 }
 
 void     Bureaucrat::executeForm(Form const & form) const {
+    form.execute(*this);
     std::cout << this->_name << " execute " << form.getFormName() << std::endl;
+    form.execAction(*this);
 }
 
 //  Operator

@@ -3,6 +3,9 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 NAME	=	bureaucrat	
 SRC		=	Bureaucrat.cpp \
 			Form.cpp \
+			PresidentialPardonForm.cpp \
+			RobotomyRequestForm.cpp \
+			ShrubberyCreationForm.cpp \
 			main.cpp
 
 OBJ		=	$(SRC:%.cpp=%.o)

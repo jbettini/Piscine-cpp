@@ -3,6 +3,7 @@ CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 NAME	=	bureaucrat	
 SRC		=	Bureaucrat.cpp \
 			Form.cpp \
+			Intern.cpp \
 			PresidentialPardonForm.cpp \
 			RobotomyRequestForm.cpp \
 			ShrubberyCreationForm.cpp \

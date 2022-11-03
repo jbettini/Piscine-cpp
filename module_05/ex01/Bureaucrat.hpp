@@ -32,21 +32,21 @@ class Bureaucrat {
             void            incrementGrade(void);
             void            decrementGrade(void);
             
+            void            signForm(std::string formName, bool t) const;
 
 
     private :
             std::string const _name;
             int               _grade;
-            
+
     class GradeTooHighException : public std::exception {
         virtual const char* what() const throw() {
-            return ("Error : Grade too Hight !");
+            return ("Error from Bureaucrat : Grade too Hight !");
         }
     };
-    
     class GradeTooLowException : public std::exception {
         virtual const char* what() const throw() {
-            return ("Error : Grade too low !");
+            return ("Error from Bureaucrat : Grade too low !");
         }
     };
 };

@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 02:44:44 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/03 01:29:39 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/02 02:21:51 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,13 +57,6 @@ void        Form::beSigned(Bureaucrat const & b) {
     }
     else
         b.signForm(this->_formName, 0);
-}
-
-void    Form::execute(Bureaucrat const & executor)    const {
-    if (executor.getGrade() > this->_gradeToExec)
-        throw Form::GradeTooLowException();
-    else if (!this->_signed)
-        throw Form::ExecuteException();
 }
 
 // Operator
