@@ -1,7 +1,7 @@
 CC		=	clang++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g
-NAME	=	
-SRC		=	
+NAME	=	template	
+SRC		=	main.cpp
 
 OBJ		=	$(SRC:%.cpp=%.o)
 

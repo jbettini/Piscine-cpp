@@ -5,19 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 01:47:40 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/03 03:16:24 by jbettini         ###   ########.fr       */
+/*   Created: 2022/11/11 05:34:03 by jbettini          #+#    #+#             */
+/*   Updated: 2022/11/11 06:27:43 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Intern.hpp"
+#include "template.hpp"
 
-int main () {
-
-    Intern  someRandomIntern;
-    Form*   rrf;
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-    Bureaucrat              a(1, "President");
-    rrf->beSigned(a);
-    a.executeForm(*rrf);
+int main(void) {
+    int tab[] = {1, 2, 3};
+    iter(tab, 3, print);
+    iter(tab, 3, initToZero);
+    iter(tab, 3, print);
+    return (0);
 }

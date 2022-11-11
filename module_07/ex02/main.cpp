@@ -5,19 +5,40 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 01:47:40 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/03 03:16:24 by jbettini         ###   ########.fr       */
+/*   Created: 2022/11/11 05:43:50 by jbettini          #+#    #+#             */
+/*   Updated: 2022/11/11 07:30:44 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Intern.hpp"
+#include <iostream>
+#include <string>
+#include "array.hpp"
 
-int main () {
+int main(void) {
+    
+    std::cout << "a : "<< std::endl;
+    Array <> a;
+    std::cout << a;
 
-    Intern  someRandomIntern;
-    Form*   rrf;
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-    Bureaucrat              a(1, "President");
-    rrf->beSigned(a);
-    a.executeForm(*rrf);
+    std::cout << "b : " << std::endl;
+    Array <> b(2);
+    std::cout << b;
+
+    a = b;
+    std::cout << "a = b : "<< std::endl;
+    std::cout << a;
+    Array <> c(a);
+
+    std::cout << "a[] : "<< std::endl; 
+    a[1] = 5;
+    std::cout << a;
+    std::cout << b;
+    std::cout << c;
+    try {
+        a[100];
+    }
+    catch (std::exception &e) {
+        std:: cout << e.what() << std::endl;
+    }
+    return (0);
 }

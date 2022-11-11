@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   template.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 01:47:40 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/03 03:16:24 by jbettini         ###   ########.fr       */
+/*   Created: 2022/11/11 04:38:32 by jbettini          #+#    #+#             */
+/*   Updated: 2022/11/11 04:50:53 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Intern.hpp"
+#ifndef TEMPLATE_HPP
+#define TEMPLATE_HPP 
 
-int main () {
+#include <string>
+#include <iostream>
 
-    Intern  someRandomIntern;
-    Form*   rrf;
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-    Bureaucrat              a(1, "President");
-    rrf->beSigned(a);
-    a.executeForm(*rrf);
+template <typename T>
+T   max(T const & x, T const & y) {
+    return ((x >= y) ? x : y);
 }
+
+template <typename T>
+T   min(T const & x, T const & y) {
+    return ((x <= y) ? x : y);
+}
+
+template <typename T>
+void swap(T & x, T & y) {
+    T tmp = x;
+    x = y;
+    y = tmp;
+}
+
+#endif
