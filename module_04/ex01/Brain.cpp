@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 19:03:18 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/25 19:54:18 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/14 07:17:58 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ Brain::Brain(Brain const & src) {
 
 Brain::~Brain(void) { 
     std::cout << "Brain Destructor called !" << std::endl;
+}
+
+void    Brain::printIdeas(void) {
+    for (int i = 0; i < 100 ; i++)
+        std::cout << this->ideas[i] << std::endl;
 }
 
 Brain & Brain::operator=(Brain const & rhs) {

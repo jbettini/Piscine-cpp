@@ -1,6 +1,6 @@
 CC		=	c++
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -g
-NAME	=	array	
+NAME	=	easyfind	
 SRC		=	main.cpp \
 
 OBJ		=	$(SRC:%.cpp=%.o)

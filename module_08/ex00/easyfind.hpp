@@ -1,35 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:06:19 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/14 07:27:05 by jbettini         ###   ########.fr       */
+/*   Created: 2022/11/11 07:47:00 by jbettini          #+#    #+#             */
+/*   Updated: 2022/11/11 08:26:19 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#ifndef EASYFIND_HPP
+#define EASYFIND_HPP
 
-#include    <string>
-#include    <iostream>
+#include <iterator>
+#include <iostream>
+#include <string>
 
-class Brain {
-
-    public:
-            Brain(void);
-            Brain(std::string id);
-            Brain(Brain const & src);
-            ~Brain(void);
-
-            Brain & operator=(Brain const & rhs);
-            void    printIdeas(void);
-            
-    protected :
-            std::string ideas[100];
-
-};
+template <typename T>
+typename T::iterator easyfind(T container, int i) {
+    
+    std::typename T::iterator it;
+    for (it = container.begin(); it != container.end(); it++)
+        if (*it == i)
+            return it;
+    return it;
+}
 
 #endif

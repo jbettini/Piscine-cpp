@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/25 18:06:19 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/14 07:27:05 by jbettini         ###   ########.fr       */
+/*   Created: 2022/11/11 08:11:46 by jbettini          #+#    #+#             */
+/*   Updated: 2022/11/11 08:23:57 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAIN_HPP
-#define BRAIN_HPP
+#include "easyfind.hpp"
+#include <list>
 
-#include    <string>
-#include    <iostream>
+int main(void) {
+    std::list<int> lst;
 
-class Brain {
+    lst.push_back(1);
+    lst.push_back(2);
+    lst.push_back(3);
 
-    public:
-            Brain(void);
-            Brain(std::string id);
-            Brain(Brain const & src);
-            ~Brain(void);
-
-            Brain & operator=(Brain const & rhs);
-            void    printIdeas(void);
-            
-    protected :
-            std::string ideas[100];
-
-};
-
-#endif
+    std::cout << *(easyfind(lst, 4)) << std::endl;
+    return 0;
+}

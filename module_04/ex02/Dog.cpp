@@ -36,6 +36,10 @@ Dog::~Dog(void) {
 
 Dog & Dog::operator=(Dog const & rhs) {
     this->type = rhs.type;
+    delete this->_b;
+    this->_b = new Brain("Wafffff");
+    for(int i = 0; i < 100 ; i++)
+        this->_b[i] = rhs._b[i];
     return *this;
 }
 

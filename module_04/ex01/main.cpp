@@ -12,6 +12,7 @@ int main() {
         else 
             a[i] = new Cat(); 
     }
-    delete a;
+    for(int i = 0; i < 4; i++)
+        delete a[i];
 return 0; 
 }

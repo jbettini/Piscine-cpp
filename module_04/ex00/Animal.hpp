@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/23 18:13:42 by jbettini          #+#    #+#             */
-/*   Updated: 2022/10/25 00:57:18 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/14 06:51:32 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Animal {
         Animal(void);
         Animal(std::string t);
         Animal(Animal const& src);
-        ~Animal(void);
+        virtual ~Animal(void);
         Animal & operator=(Animal const & rhs);
 
         virtual void makeSound(void) const ;

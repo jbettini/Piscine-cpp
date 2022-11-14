@@ -36,6 +36,10 @@ Cat::~Cat(void) {
 
 Cat & Cat::operator=(Cat const & rhs) {
     this->type = rhs.type;
+     delete this->_b;
+    this->_b = new Brain("Miaouuuu");
+    for(int i = 0; i < 100 ; i++)
+        this->_b[i] = rhs._b[i];
     return *this;
 }
 
