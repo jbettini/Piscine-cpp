@@ -1,21 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   array.tpp                                          :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/11 06:03:13 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/11 06:04:32 by jbettini         ###   ########.fr       */
+/*   Created: 2022/11/18 13:18:33 by jbettini          #+#    #+#             */
+/*   Updated: 2022/11/18 15:16:53 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "array.hpp"
+#include "Span.hpp"
+
+int main(void) {
+
+    Span    sp(5);
+
+    sp.addNumber(6);
+    sp.addNumber(3);
+    sp.addNumber(17);
+    sp.addNumber(9);
+    sp.addNumber(11);
 
 
-// **** Constructor ****
+    std::cout << sp.longestSpan() << std::endl;
+    std::cout << sp.shortestSpan() << std::endl;
 
+    Span    sp2(5);
 
-
-// **** Overload ****
-
+    sp2.addRange((sp.getLst()).begin(), (sp.getLst()).end());
+}
