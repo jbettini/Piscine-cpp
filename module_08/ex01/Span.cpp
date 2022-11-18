@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 12:52:44 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/18 14:52:09 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:09:05 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,14 @@ std::list<int>	Span::getLst(void) {
 
 unsigned	int	Span::getSize(void) {
 	return (this->_size);
+}
+
+std::list<int>::iterator	Span::begin(void) {
+	return (this->_lst.begin());
+}
+
+std::list<int>::iterator	Span::end(void) {
+	return (this->_lst.end());
 }
 
 // **** Member Funct ****

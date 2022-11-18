@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/18 13:18:32 by jbettini          #+#    #+#             */
-/*   Updated: 2022/11/18 15:46:12 by jbettini         ###   ########.fr       */
+/*   Updated: 2022/11/18 16:15:50 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,15 @@ class Span
 
 				std::list<int>	getLst(void);
 				unsigned	int	getSize(void);
+				std::list<int>::iterator	begin(void);
+				std::list<int>::iterator	end(void);
 
 				void	addRange(std::list<int>::iterator begin, std::list<int>::iterator end) {
-					unsigned int	size;
-					std::list<int>::iterator tmp2 = begin;
-					for (size = 0; tmp2 != end; tmp2++) {
-						size++;
-						std::cout << "adress tmp : " << *tmp2 << std::endl;
-						std::cout << "adress end : " << &end << std::endl;
-					}
-					if (size > this->getSize() - this->_lst.size())
+					unsigned int distance = std::distance(begin, end);
+					if ( distance >  this->getSize() - this->_lst.size())
 						throw Span::AddNumberException();
-					for (std::list<int>::iterator tmp = begin; tmp != end; tmp++)
-						this->_lst.push_back(*tmp);
+					for (long i = -1; ++i < distance; begin++)
+						this->_lst.push_back(*begin);
 				}
 
 				
