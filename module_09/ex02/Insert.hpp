@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 10:08:49 by jbettini          #+#    #+#             */
-/*   Updated: 2023/05/07 15:12:36 by jbettini         ###   ########.fr       */
+/*   Updated: 2023/05/09 16:58:57 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,9 @@ class insert {
             void    makeInput(void);
             void    sortVector(void);
             void    sortList(void);
+            void    mergeInsertionSort(int start, int end); 
+            void    InsertionSort(int start, int end);
+            void    mergeSort(int start, int mid, int end);
             
             std::list<int> getList(void) {
                 return (this->_myl);
