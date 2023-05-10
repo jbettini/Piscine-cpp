@@ -6,7 +6,7 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 10:08:49 by jbettini          #+#    #+#             */
-/*   Updated: 2023/05/09 19:09:06 by jbettini         ###   ########.fr       */
+/*   Updated: 2023/05/10 16:24:41 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,12 @@ class insert {
             void    makeInput(void);
             void    sortVector(void);
             void    sortList(void);
-            void    mergeInsertionSort(int start, int end); 
-            void    InsertionSort(int start, int end);
-            void    mergeSort(int start, int mid, int end);
+            void    mergeInsertionSortVector(int start, int end); 
+            void    InsertionSortVector(int start, int end);
+            void    mergeSortVector(int start, int mid, int end);
+            void    InsertionSortDeque(int start, int end);
+            void    mergeSortDeque(int start, int mid, int end);
+            void    mergeInsertionSortDeque(int start, int end); 
             
             std::deque<int> getDeque(void) {
                 return (this->_myd);
