@@ -6,14 +6,14 @@
 /*   By: jbettini <jbettini@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/07 10:08:49 by jbettini          #+#    #+#             */
-/*   Updated: 2023/05/09 16:58:57 by jbettini         ###   ########.fr       */
+/*   Updated: 2023/05/09 19:09:06 by jbettini         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string> 
 #include <iostream>
 #include <vector>
-#include <list>
+#include <deque>
 #include <limits>
 #include <iterator>
 #include <iomanip>
@@ -33,8 +33,8 @@ class insert {
             void    InsertionSort(int start, int end);
             void    mergeSort(int start, int mid, int end);
             
-            std::list<int> getList(void) {
-                return (this->_myl);
+            std::deque<int> getDeque(void) {
+                return (this->_myd);
             }
 
             std::vector<int> getVector(void) {
@@ -64,6 +64,6 @@ class insert {
         };
 
     private :
-                std::list<int> _myl;
+                std::deque<int> _myd;
                 std::vector<int> _myv;
 };
